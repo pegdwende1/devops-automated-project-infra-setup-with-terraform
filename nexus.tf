@@ -1,7 +1,7 @@
 resource "aws_instance" "nexus" {
   ami           = " amazon linux 2 ami"
   instance_type = "t2.medium"
-  user_data = base64decode(file("nexus.sh"))
+  user_data = base64encode(file("nexus.sh"))
   key_name = "remote-kp"
 
   tags = {

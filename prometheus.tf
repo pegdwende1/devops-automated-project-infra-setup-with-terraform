@@ -1,7 +1,7 @@
 resource "aws_instance" "prometh" {
   ami           = " amazon linux 2 ami"
   instance_type = "t2.micro"
-  user_data = base64decode(file("prometheus.sh"))
+  user_data = base64encode(file("prometheus.sh"))
   key_name = "remote-kp"
 
   tags = {

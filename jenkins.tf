@@ -1,7 +1,7 @@
 resource "aws_instance" "Jenk" {
   ami           = " amazon linux 2 ami"
   instance_type = "t2.medium"
-  user_data = base64decode(file("jenkins-maven-ansible-setup.sh"))
+  user_data = base64encode(file("jenkins-maven-ansible-setup.sh"))
   key_name = "remote-kp"
 
   tags = {
