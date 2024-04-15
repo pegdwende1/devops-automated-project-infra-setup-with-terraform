@@ -9,7 +9,6 @@ resource "aws_instance" "Jenk" {
   }
 }
 
-
 resource "aws_security_group" "jenkins" {
   name   = "Jenkins"
   vpc_id = aws_vpc.myvpc.id
