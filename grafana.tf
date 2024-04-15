@@ -1,5 +1,5 @@
 resource "aws_instance" "grafana" {
-  ami           = "Ubuntu 20.04 ami"
+  ami           = "ami-02bfcfbf6fc7e8ce4"     #Ubuntu 20.04 ami
   instance_type = "t2.micro"
   user_data = base64encode(file("grafana.sh"))
   key_name = "remote-kp"
