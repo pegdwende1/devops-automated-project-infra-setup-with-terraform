@@ -1,7 +1,7 @@
 resource "aws_instance" "sonarQ" {
   ami           = "ami-02bfcfbf6fc7e8ce4"    #ubuntu 20.04
   instance_type = "t2.medium"
-  user_data = base64encode(file("sonarQube.sh"))
+  user_data = base64encode(file("SonarQube.sh"))
 
   tags = {
     Name = "Sonarqube"
